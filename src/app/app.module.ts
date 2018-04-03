@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
+import {
+  RouterModule,
+  Router,
+  Routes
+} from '@angular/router';
 
 /*
  * Components
@@ -24,6 +29,16 @@ import { LoggedInGuard } from './guards/loggedIn.guard';
 export class AppComponent {
 }
 
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  {
+    path: 'protected', component: ProtectedComponent,
+    canActivate: [LoggedInGuard]
+  }
+];
 
 @NgModule({
   declarations: [
@@ -35,7 +50,8 @@ export class AppComponent {
     ProtectedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     AUTH_PROVIDERS,
