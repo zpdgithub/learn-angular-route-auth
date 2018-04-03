@@ -12,6 +12,7 @@ import { ProtectedComponent } from './components/ProtectedComponent';
  * Services
  */
 import { AUTH_PROVIDERS } from './services/AuthService';
+import { LoggedInGuard } from './guards/loggedIn.guard';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,10 @@ export class AppComponent {
   imports: [
     BrowserModule
   ],
-  providers: [AUTH_PROVIDERS],
+  providers: [
+    AUTH_PROVIDERS,
+    LoggedInGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
