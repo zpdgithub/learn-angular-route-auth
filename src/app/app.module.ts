@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
  * Components
  */
 import { LoginComponent } from './components/LoginComponent';
+import { ProtectedComponent } from './components/ProtectedComponent';
 
 /*
  * Services
@@ -23,7 +24,8 @@ export class AppComponent {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule
