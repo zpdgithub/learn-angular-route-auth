@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
 /*
  * Components
  */
+import { HomeComponent } from './components/HomeComponent';
+import { AboutComponent } from './components/AboutComponent';
+import { ContactComponent } from './components/ContactComponent';
 import { LoginComponent } from './components/LoginComponent';
 import { ProtectedComponent } from './components/ProtectedComponent';
 
@@ -25,6 +28,9 @@ export class AppComponent {
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
     LoginComponent,
     ProtectedComponent
   ],
