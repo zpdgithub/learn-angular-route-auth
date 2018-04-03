@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 
+/*
+ * Components
+ */
+import { LoginComponent } from './components/LoginComponent';
 
 /*
  * Services
@@ -18,7 +22,8 @@ export class AppComponent {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule
